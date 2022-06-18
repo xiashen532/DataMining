@@ -20,7 +20,7 @@ def visualize_direction(file):
 
 
 # 预处理 direction 属性，凡是有“南“朝向存在均置1，反之置0
-def direction(file):
+def pre_direction(file):
     data = file.loc[:, 'direction']
     res_data = []
 
@@ -42,4 +42,4 @@ def direction(file):
 # visualize_direction(df)
 
 df = pd.read_csv("../data/test.csv", encoding='utf-8')
-direction(df)
+pre_direction(df)

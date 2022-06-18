@@ -1,5 +1,5 @@
 from transform import word_to_num
-from direction import direction
+from direction import pre_direction
 import pandas as pd
 
 
@@ -8,7 +8,7 @@ def pretreatment(path):
 
     word_to_num(file, 'price_list')
     word_to_num(file, 'area')
-    direction(file)
+    pre_direction(file)
 
     file.to_csv(path, encoding='utf-8', index=False)
 

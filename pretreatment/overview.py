@@ -12,6 +12,8 @@ def overview(path):
     print(esf['fitment'].unique())
     print(esf['floor'].unique())
     print(esf['address'].unique())
+    # print(esf[esf.duplicated()])
+    print(esf.info())
 
 path1 = "../data/ershoufang.csv"
 overview(path1)
