@@ -3,14 +3,11 @@
 import re
 import pandas as pd
 
+
 # import matplotlib.pyplot as plt
 # import seaborn as sns
 
-df = pd.read_csv("../data/test.csv", encoding='utf-8')
-esf = pd.read_csv("../data/ershoufang.csv", encoding='utf-8')
-
-
-# 处理数据值为
+# 将数字汉字符号混合的原始数据转换为数值
 def word_to_num(file, attribute):
     simple_punctuation = '[\" /,]'
     data = file.loc[:, attribute]
@@ -23,8 +20,3 @@ def word_to_num(file, attribute):
 
     df_res = pd.DataFrame(res_data)
     file[attribute] = df_res
-
-
-word_to_num(df, 'price_list')
-word_to_num(df, 'area')
-df.to_csv("../data/test.csv", encoding='utf-8', index=False)

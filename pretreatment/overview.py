@@ -2,10 +2,16 @@
 
 import pandas as pd
 
-esf = pd.read_csv("../data/ershoufang.csv", encoding='utf-8')
 
 # 查看每个属性的所有可能取值
-print(esf['model'].unique())
-print(esf['direction'].unique())
-print(esf['fitment'].unique())
-print(esf['floor'].unique())
+def overview(path):
+    esf = pd.read_csv(path, encoding='utf-8')
+
+    print(esf['model'].unique())
+    print(esf['direction'].unique())
+    print(esf['fitment'].unique())
+    print(esf['floor'].unique())
+    print(esf['address'].unique())
+
+path1 = "../data/ershoufang.csv"
+overview(path1)
