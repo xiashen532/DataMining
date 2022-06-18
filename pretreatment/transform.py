@@ -20,3 +20,5 @@ def word_to_num(file, attribute):
 
     df_res = pd.DataFrame(res_data)
     file[attribute] = df_res
+
+    return file

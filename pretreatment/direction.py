@@ -37,9 +37,11 @@ def pre_direction(file):
     df_res = pd.DataFrame(res_data)
     file['direction'] = df_res
 
+    return file
+
 
 # df = pd.read_csv("../data/ershoufang.csv", encoding='utf-8')
 # visualize_direction(df)
 
-df = pd.read_csv("../data/test.csv", encoding='utf-8')
-pre_direction(df)
+# df = pd.read_csv("../data/test.csv", encoding='utf-8')
+# pre_direction(df)

@@ -7,6 +7,7 @@ import seaborn as sns
 from transform import word_to_num
 
 
+# 可视化 model 属性
 def visualize_model(file):
     sns.set(palette="muted", color_codes=True)  # seaborn样式
     plt.rcParams['font.sans-serif'] = ['SimHei']  # 黑体
@@ -39,10 +40,10 @@ def pre_model(file):
     file = df1
     word_to_num(file, 'hall')
 
-
+    return file
 
 # df = pd.read_csv("../data/ershoufang.csv", encoding='utf-8')
 # visualize_model(df)
 
-df = pd.read_csv("../data/test.csv", encoding='utf-8')
-pre_model(df)
+# df = pd.read_csv("../data/test.csv", encoding='utf-8')
+# pre_model(df)
