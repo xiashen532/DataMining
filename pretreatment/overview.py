@@ -13,6 +13,7 @@ def overview(path):
     # print(esf['floor'].unique())
     # print(esf['address'].unique())
     # print(esf[esf.duplicated()])
+    print(esf['total_list'][esf['total_list'] > 1500].count())
     print(esf.info())
     # esf = clean(esf)
     # esf.to_csv(path, encoding='utf-8', index=False)

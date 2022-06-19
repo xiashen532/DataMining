@@ -26,10 +26,11 @@ def pre_model(file):
         columns=['name', 'model', 'area', 'direction', 'fitment', 'floor', 'address', 'total_list', 'price_list'])
 
     for index, row in file.iterrows():
-        if (row['model'] == '4室3厅' or row['model'] == '4室2厅' or row['model'] == '3室2厅' or
+        if ((row['model'] == '4室3厅' or row['model'] == '4室2厅' or row['model'] == '3室2厅' or
                 row['model'] == '1室1厅' or row['model'] == '2室1厅' or row['model'] == '3室1厅' or
                 row['model'] == '5室2厅' or row['model'] == '2室2厅' or row['model'] == '2室0厅' or
-                row['model'] == '1室0厅' or row['model'] == '1室2厅' or row['model'] == '5室3厅'):
+                row['model'] == '1室0厅' or row['model'] == '1室2厅' or row['model'] == '5室3厅')
+                and (float(row['total_list']) < 1500)):
             df_res = df_res.append(row, ignore_index=True)
 
     file = df_res
