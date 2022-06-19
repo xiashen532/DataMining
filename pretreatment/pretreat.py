@@ -3,6 +3,7 @@ from pretreatment.direction import pre_direction
 from pretreatment.model import pre_model
 from pretreatment.address import pre_address
 from pretreatment.fitment import pre_fitment
+from pretreatment.floor import pre_floor
 from pretreatment.overview import clean
 import pandas as pd
 
@@ -15,6 +16,7 @@ def pretreatment(path):
     file = word_to_num(file, 'area')
     file = pre_direction(file)
     file = pre_model(file)
+    file = pre_floor(file)
     file = pre_address(file)
     file = pre_fitment(file)
 

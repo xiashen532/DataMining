@@ -27,6 +27,7 @@ base
 │  │  address.py            // 处理属性address
 │  │  direction.py          // 处理属性direction
 │  │  fitment.py            // 处理属性fitment
+│  │  floor.py              // 处理属性floor
 │  │  model.py              // 处理属性model
 │  │  overview.py           // 浏览csv相关信息
 │  │  pretreat.py           // 预处理函数入口
@@ -39,7 +40,12 @@ base
 │  │  
 │  └─__pycache__
 │          
-└─venv
+├─venv
+│  
+└─report
+   │ report.md              // 项目报告
+   │  
+   └─static                  // 报告静态文件
 ```
 
 ## 启动方法

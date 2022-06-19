@@ -6,7 +6,7 @@ import pandas as pd
 
 # 将数字汉字符号混合的原始数据转换为数值
 def word_to_num(file, attribute):
-    simple_punctuation = '[\" /,]'
+    simple_punctuation = '[\" /,)]'
     data = file.loc[:, attribute]
     res_data = []
 

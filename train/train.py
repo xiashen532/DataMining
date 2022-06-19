@@ -13,7 +13,7 @@ def train(path):
     file = pd.read_csv(path, encoding='utf-8')
     file.drop(file.tail(1).index, inplace=True)
     del file['name']
-    del file['floor']
+    # del file['floor']
 
     # 平滑处理y
     y = np.log1p(file['total_list'])
