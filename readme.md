@@ -43,4 +43,4 @@ base
 ```
 
 ## 启动方法
-运行main.py文件即可启动
+安装requirements后，运行main.py文件即可启动
