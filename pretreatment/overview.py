@@ -25,5 +25,3 @@ def clean(file):
     return file
 
 
-path1 = "../data/res.csv"
-overview(path1)

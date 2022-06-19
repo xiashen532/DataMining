@@ -1,9 +1,9 @@
-from transform import word_to_num
-from direction import pre_direction
-from model import pre_model
-from address import pre_address
-from fitment import pre_fitment
-from overview import clean
+from pretreatment.transform import word_to_num
+from pretreatment.direction import pre_direction
+from pretreatment.model import pre_model
+from pretreatment.address import pre_address
+from pretreatment.fitment import pre_fitment
+from pretreatment.overview import clean
 import pandas as pd
 
 
@@ -18,6 +18,6 @@ def pretreatment(path):
     file = pre_address(file)
     file = pre_fitment(file)
 
-    file.to_csv("../data/res.csv", encoding='utf-8', index=False)
+    file.to_csv("data/res.csv", encoding='utf-8', index=False)
+    print("Pretreat Success!\n")
 
-pretreatment("../data/ershoufang.csv")

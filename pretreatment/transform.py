@@ -4,9 +4,6 @@ import re
 import pandas as pd
 
 
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-
 # 将数字汉字符号混合的原始数据转换为数值
 def word_to_num(file, attribute):
     simple_punctuation = '[\" /,]'

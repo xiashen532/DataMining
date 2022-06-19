@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-import re
+import warnings
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from transform import word_to_num
+from pretreatment.transform import word_to_num
 
 
 # 可视化 model 属性
@@ -22,6 +22,7 @@ def visualize_model(file):
 
 
 def pre_model(file):
+    warnings.filterwarnings('ignore')
     df_res = pd.DataFrame(
         columns=['name', 'model', 'area', 'direction', 'fitment', 'floor', 'address', 'total_list', 'price_list'])
 
